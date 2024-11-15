@@ -10,7 +10,7 @@ Implement the function which takes an array containing the names of people that 
 Note: For 4 or more names, the number in "and 2 others" simply increases. -->
 
 <?php
-function likes(names) {
+function likes(names){
   switch (names.length) {
     case 0:
       return "no one likes this";
