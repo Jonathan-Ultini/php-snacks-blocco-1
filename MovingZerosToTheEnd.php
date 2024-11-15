@@ -3,9 +3,12 @@
 
 // moveZeros([false,1,0,1,2,0,1,3,"a"]) // returns[false,1,1,2,1,3,"a",0,0]
 
-function moveZeros(array $items): array
-{
-  $result = array_filter($items, fn($item) => $item !== 0); //toglie zeri
-  $zeroCount = count($items) - count($result); //conta zeri
-  return array_merge($result, array_fill(0, $zeroCount, 0)); //combina risultati
+function findOutlier(integers) {
+  const isEven = (Math.abs(integers[0]) % 2 + Math.abs(integers[1]) % 2 + Math.abs(integers[2]) % 2) < 2;
+
+  for (let num of integers) {
+    if ((Math.abs(num) % 2 === 0) !== isEven) {
+      return num;
+    }
+  }
 }
